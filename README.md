@@ -1,55 +1,63 @@
-# Weather Forecasting using Machine Learning
+# LSTM Weather Prediction
 
-This project focuses on **weather forecasting using machine learning techniques**, analyzing historical weather data to predict future weather-related variables. The notebook demonstrates data preprocessing, exploratory data analysis, model training, and evaluation.
+This project implements **weather forecasting using Long Short-Term Memory (LSTM) neural networks**, a specialized type of Recurrent Neural Network (RNN) designed to model temporal dependencies in time-series data.
+
+The objective is to predict future weather values based on historical observations using deep learning techniques.
+
+GitHub Repository:
+[https://github.com/chanduchowdary8978/LSTM-Weather-Prediction](https://github.com/chanduchowdary8978/LSTM-Weather-Prediction)
 
 ---
 
 ## Project Overview
 
-Weather forecasting is a classical time-series and regression problem.
-In this project, machine learning models are applied to structured weather datasets to learn patterns and relationships among meteorological variables such as temperature, humidity, wind speed, and rainfall.
+Weather data exhibits strong temporal patterns and non-linear relationships. Traditional regression models often struggle to capture long-term dependencies present in such data.
 
-The workflow is implemented entirely in a Jupyter Notebook for clarity and experimentation.
+This project applies an LSTM-based approach to learn sequential patterns from historical weather data and generate accurate forecasts.
+
+The complete workflow is implemented in a Jupyter Notebook for clarity, experimentation, and reproducibility.
 
 ---
 
 ## Features
 
-* Data loading and preprocessing
-* Handling missing values and feature selection
-* Exploratory Data Analysis (EDA)
-* Machine learning model training
-* Model evaluation using standard regression metrics
-* Clear and reproducible notebook workflow
+* Time-series data preprocessing
+* Feature scaling and normalization
+* Sequence generation for LSTM input
+* LSTM model training and evaluation
+* Prediction of future weather values
+* Visualization of predicted vs actual values
 
 ---
 
-## Machine Learning Techniques Used
+## Methodology
 
-* Regression-based prediction models
-* Train–test split for evaluation
-* Error metrics such as Mean Squared Error (MSE) and RMSE
-
-*(Exact models depend on the notebook implementation)*
+1. Load and preprocess historical weather data
+2. Normalize numerical features
+3. Convert time-series data into supervised learning format
+4. Train LSTM neural network
+5. Evaluate model performance on test data
+6. Visualize forecasting results
 
 ---
 
 ## Tech Stack
 
 * Python
-* Jupyter Notebook
 * NumPy
 * Pandas
-* Matplotlib
 * Scikit-learn
+* TensorFlow / Keras
+* Matplotlib
+* Jupyter Notebook
 
 ---
 
 ## File Structure
 
 ```text
-WeatherForecasting.ipynb   # Main notebook
-README.md                 # Project documentation
+LSTM_Weather_Prediction.ipynb   # Main notebook
+README.md                      # Project documentation
 ```
 
 ---
@@ -59,54 +67,46 @@ README.md                 # Project documentation
 1. Clone the repository
 
 ```bash
-git clone https://github.com/chanduchowdary8978/<your-weather-repo>.git
-cd <your-weather-repo>
+git clone https://github.com/chanduchowdary8978/LSTM-Weather-Prediction.git
+cd LSTM-Weather-Prediction
 ```
 
-2. Install dependencies
+2. Install required dependencies
 
 ```bash
-pip install numpy pandas matplotlib scikit-learn
+pip install numpy pandas matplotlib scikit-learn tensorflow
 ```
 
 3. Open the notebook
 
 ```bash
-jupyter notebook WeatherForecasting.ipynb
+jupyter notebook LSTM_Weather_Prediction.ipynb
 ```
 
 ---
 
 ## Dataset
 
-* Historical weather data
-* Structured tabular format
-* Contains numerical meteorological features
+* Historical weather observations
+* Time-indexed numerical data
+* Includes meteorological variables such as temperature and humidity
 
 ---
 
-## Results
+## Model Evaluation
 
-* Models learn temporal and statistical relationships in weather data
-* Prediction performance evaluated using regression metrics
-* Results visualized using plots for better interpretability
+* Mean Squared Error (MSE)
+* Root Mean Squared Error (RMSE)
+* Visual comparison between actual and predicted values
 
 ---
 
 ## Future Improvements
 
-* Time-series specific models (ARIMA, SARIMA, LSTM)
-* Feature engineering using lag variables
-* Cross-validation for time-series data
-* Hyperparameter tuning
-* Deployment as a web application
-
-##
+* Hyperparameter tuning (epochs, batch size, dropout)
+* Experiment with deeper LSTM architectures
+* Incorporate additional weather features
+* Multi-step forecasting
+* Deployment as a web-based application
 
 ---
-
-
-
-
-
-As the dataset is larger it can't be uploaded here.The data can be downloaded and extracted from the link : [https://storage.googleapis.com/tensorflow/tf-keras-datasets/jena_climate_2009_2016.csv.zip]
